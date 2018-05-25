@@ -1,0 +1,36 @@
+Arguments: 
+  /home/michaelost/.nvm/versions/node/v8.0.0/bin/node /usr/share/yarn/bin/yarn.js add react-native --exact
+
+PATH: 
+  /home/michaelost/bin:/usr/local/bin:/home/michaelost/anaconda3/bin:/usr/bin/pip3:/home/michaelost/jsl.0.3.0:/home/michaelost/android-studio/bin:/home/michaelost/jre1.8.0_151/bin:/home/michaelost/Android/Sdk/tools:/home/michaelost/Android/Sdk/platform-tools:/home/michaelost/Android/Sdk/build-tools/25.0.1:/home/michaelost/jdk1.8.0_151/bin:/home/michaelost/Postman:/home/michaelost/.nvm/versions/node/v8.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/michaelost/.fzf/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.0.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {"name":"Assignment","version":"0.0.1","private":true,"scripts":{"start":"node node_modules/react-native/local-cli/cli.js start"}}
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/art/-/art-0.10.2.tgz: Request failed "403 Forbidden"
+      at new ResponseError (/usr/share/yarn/lib/cli.js:238:112)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:61626:26)
+      at emitOne (events.js:115:13)
+      at Request.emit (events.js:210:7)
+      at Request.module.exports.Request.onRequestResponse (/usr/share/yarn/lib/cli.js:133316:10)
+      at emitOne (events.js:115:13)
+      at ClientRequest.emit (events.js:210:7)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:563:21)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:116:23)
+      at TLSSocket.socketOnData (_http_client.js:452:20)
