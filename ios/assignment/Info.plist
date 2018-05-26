@@ -64,6 +64,9 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>SF Light.otf</string>
+		<string>SF Medium.otf</string>
+		<string>SF Semibold.otf</string>
 	</array>
 </dict>
 </plist>

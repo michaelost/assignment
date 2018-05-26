@@ -52,7 +52,10 @@ class App extends React.Component {
                 <Text style={styles.profileTitle}>
                   Will Smith 
                 </Text>
-                <Text style={styles.profileDescriptions}>
+                <Text
+                  style={styles.profileDescriptions}
+                  numberOfLines={1}
+                >
                   American actor, producer, rapper, comedian, and songwriter.
                   In April 2007, Newsweek called him
                   "the most powerful actor in Hollywood". 
@@ -207,13 +210,14 @@ const styles = StyleSheet.create({
   contentTop: {
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: screenHeight * 0.5,
+    height: screenHeight * 0.4,
   },
   contentBotttom: {
     flexDirection: 'column',
-    height: screenHeight * 0.5,
+    height: screenHeight * 0.6,
     width: screenWidth,
-    justifyContent: 'space-between',
+   // justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   titleContent: {
     height: 50,
@@ -227,6 +231,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 25,
     color: 'white',
+    fontFamily: 'SF Light',
   },
   content: {
     alignItems: 'center',
@@ -249,11 +254,13 @@ const styles = StyleSheet.create({
   profileTitle: {
     fontSize: 24,
     color: 'white',
+    fontFamily: 'SF Semibold',
     fontWeight: 'bold',
   },
   profileDescriptions: {
     color: '#6f9cbf',
     fontSize: 14,
+    fontFamily: 'SF Light',
   },
   separator: {
     width: screenWidth,
@@ -326,10 +333,13 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   contactsBigText: {
+    fontFamily: 'SF Regular',
     color: 'white',
     fontSize: 18,
   },
   contactsSmallText: {
+
+    fontFamily: 'SF Medium',
     color: '#34546c',
     fontSize: 14,
 
