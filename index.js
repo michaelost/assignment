@@ -85,6 +85,29 @@ class App extends React.Component {
               </Text>
             </View>
           </View>
+
+          <View style={styles.buttonsContainer}>
+
+            <View style={styles.blueButton}>
+              <Text style={styles.blueButtonText}>
+                Repelishment
+              </Text>
+            </View>
+
+            <View style={styles.yellowButton}>
+              <Icon
+                name="circle"
+                size={10}
+                style={styles.circleIcon}
+              />
+              <Text style={styles.yellowButtonText}>
+                inactive 
+              </Text>
+            </View>
+
+          </View>
+
+
         </View>
         </LinearGradient>
       </View>
@@ -171,7 +194,50 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#6f9cbf',
   },
-  
+  buttonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: screenWidth * 0.92,
+  },
+  blueButton: {
+    paddingTop: 10, 
+    paddingBottom: 10,
+    paddingLeft: 30,
+    paddingRight: 30,
+    backgroundColor: '#0b9fe4',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  blueButton: {
+    paddingTop: 10, 
+    paddingBottom: 10,
+    paddingLeft: 30,
+    paddingRight: 30,
+    backgroundColor: '#0b9fe4',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  blueButtonText: {
+    color: 'white',
+    fontSize: 14,
+  },
+  yellowButton: {
+    paddingTop: 10, 
+    paddingBottom: 10,
+    paddingLeft: 30,
+    paddingRight: 30, 
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    width: 200,
+  },
+  yellowButtonText: {
+    color: '#e4c60b',
+    fontSize: 14,
+  },
+  circleIcon: {
+    color: '#e4c60b',
+  }
 });
 
 AppRegistry.registerComponent('assignment', () => App);
