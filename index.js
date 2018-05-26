@@ -6,6 +6,7 @@ import {
   View,
   StyleSheet,
   Dimensions,
+  ScrollView,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -15,7 +16,7 @@ class App extends React.Component {
   render() {
     const resizeMode = 'stretch';
     return (
-      <View
+      <ScrollView
         style={styles.container}
       >
         <LinearGradient
@@ -87,13 +88,11 @@ class App extends React.Component {
             </View>
 
             <View style={styles.buttonsContainer}>
-
               <View style={styles.blueButton}>
                 <Text style={styles.blueButtonText}>
                   Repelishment
                 </Text>
               </View>
-
               <View style={styles.yellowButton}>
                 <Icon
                   name="circle"
@@ -104,13 +103,15 @@ class App extends React.Component {
                   inactive 
                 </Text>
               </View>
-
             </View>
+
+
+
           </View>
         <View style={styles.contentBotttom}>
           <View style={styles.contactsContainer}> 
             <View style={styles.contactsImageWrapper}>
-              <Image 
+              <Image
                 source={require('Assignment/assets/phone.png')} 
               />
             </View>
@@ -122,6 +123,10 @@ class App extends React.Component {
                 Phone number  
               </Text>             
             </View>
+            <Image
+              style={styles.feedback}
+              source={require('Assignment/assets/feedback.png')} 
+            />
           </View>
           <View style={styles.contactsContainer}> 
             <View style={styles.contactsImageWrapper}>
@@ -184,10 +189,9 @@ class App extends React.Component {
             </View>
           </View>
         </View>
-
         </View>
         </LinearGradient>
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -203,12 +207,13 @@ const styles = StyleSheet.create({
   contentTop: {
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: screenHeight * 0.4,
+    height: screenHeight * 0.5,
   },
   contentBotttom: {
     flexDirection: 'column',
-    height: screenHeight * 0.4,
+    height: screenHeight * 0.5,
     width: screenWidth,
+    justifyContent: 'space-between',
   },
   titleContent: {
     height: 50,
@@ -225,7 +230,7 @@ const styles = StyleSheet.create({
   },
   content: {
     alignItems: 'center',
-    marginTop: 20,
+   // marginTop: 20,
   },
   avatarContent: {
     flexDirection: 'row',
@@ -317,7 +322,8 @@ const styles = StyleSheet.create({
   },
   contactsContainer: {
     flexDirection: 'row',
-    alignItems: 'center'   
+    alignItems: 'center',
+    position: 'relative',
   },
   contactsBigText: {
     color: 'white',
@@ -334,6 +340,11 @@ const styles = StyleSheet.create({
   contactsImageWrapper: {
     marginLeft: 20,
     width: 40,
+  },
+  feedback: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
   }
 });
 
