@@ -1,10 +1,14 @@
-{"name":"Assignment",
-  "version":"0.0.1",
-  "private":true,
-  "scripts":
-    {"start":"node node_modules/react-native/local-cli/cli.js start"},
+{
+  "name": "Assignment",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
   "dependencies": {
+    "react": "^16.0.0",
     "react-native": "0.55.4",
-    "react": "^16.0.0"
+    "react-native-linear-gradient": "^2.4.0",
+    "react-native-vector-icons": "^4.6.0"
   }
 }
