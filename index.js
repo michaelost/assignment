@@ -40,73 +40,150 @@ class App extends React.Component {
           <View style={styles.separator}>
 
           </View>
-        
-          <View style={styles.avatarContent}>
-            <View style={styles.avatarImage}>
+          <View style={styles.contentTop}>        
+            <View style={styles.avatarContent}>
+              <View style={styles.avatarImage}>
+                <Image 
+                  source={require('Assignment/assets/avatar.png')} 
+                />
+              </View>
+              <View style={styles.profileText}>
+                <Text style={styles.profileTitle}>
+                  Will Smith 
+                </Text>
+                <Text style={styles.profileDescriptions}>
+                  American actor, producer, rapper, comedian, and songwriter.
+                  In April 2007, Newsweek called him
+                  "the most powerful actor in Hollywood". 
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.stats}>
+              <View style={styles.statContainer}>
+                <Text style={styles.count}>
+                  20 
+                </Text>
+                <Text style={styles.statName}>
+                  Patterns
+                </Text>
+              </View>
+              <View style={styles.statContainer}>
+                <Text style={styles.count}>
+                  358 000 T
+                </Text>
+                <Text style={styles.statName}>
+                  Tokens
+                </Text>
+              </View>
+              <View style={styles.statContainer}>
+                <Text style={styles.count}>
+                  20
+                </Text>
+                <Text style={styles.statName}>
+                  Investments
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.buttonsContainer}>
+
+              <View style={styles.blueButton}>
+                <Text style={styles.blueButtonText}>
+                  Repelishment
+                </Text>
+              </View>
+
+              <View style={styles.yellowButton}>
+                <Icon
+                  name="circle"
+                  size={10}
+                  style={styles.circleIcon}
+                />
+                <Text style={styles.yellowButtonText}>
+                  inactive 
+                </Text>
+              </View>
+
+            </View>
+          </View>
+        <View style={styles.contentBotttom}>
+          <View style={styles.contactsContainer}> 
+            <View style={styles.contactsImageWrapper}>
               <Image 
-                source={require('Assignment/assets/avatar.png')} 
+                source={require('Assignment/assets/phone.png')} 
               />
             </View>
-            <View style={styles.profileText}>
-              <Text style={styles.profileTitle}>
-                Will Smith 
-              </Text>
-              <Text style={styles.profileDescriptions}>
-                American actor, producer, rapper, comedian, and songwriter.
-                In April 2007, Newsweek called him
-                "the most powerful actor in Hollywood". 
-              </Text>
+            <View style={styles.contactsContent}>
+              <Text style={styles.contactsBigText}>
+                +380 90 123 45 67
+              </Text>             
+              <Text style={styles.contactsSmallText}>
+                Phone number  
+              </Text>             
             </View>
           </View>
-
-          <View style={styles.stats}>
-            <View style={styles.statContainer}>
-              <Text style={styles.count}>
-                20 
-              </Text>
-              <Text style={styles.statName}>
-                Patterns
-              </Text>
-            </View>
-            <View style={styles.statContainer}>
-              <Text style={styles.count}>
-                358 000 T
-              </Text>
-              <Text style={styles.statName}>
-                Tokens
-              </Text>
-            </View>
-            <View style={styles.statContainer}>
-              <Text style={styles.count}>
-                20
-              </Text>
-              <Text style={styles.statName}>
-                Investments
-              </Text>
-            </View>
-          </View>
-
-          <View style={styles.buttonsContainer}>
-
-            <View style={styles.blueButton}>
-              <Text style={styles.blueButtonText}>
-                Repelishment
-              </Text>
-            </View>
-
-            <View style={styles.yellowButton}>
-              <Icon
-                name="circle"
-                size={10}
-                style={styles.circleIcon}
+          <View style={styles.contactsContainer}> 
+            <View style={styles.contactsImageWrapper}>
+              <Image 
+                source={require('Assignment/assets/envelop.png')} 
               />
-              <Text style={styles.yellowButtonText}>
-                inactive 
-              </Text>
             </View>
-
+            <View style={styles.contactsContent}>
+              <Text style={styles.contactsBigText}>
+                smith@gmail.com
+              </Text>             
+              <Text style={styles.contactsSmallText}>
+                Email
+              </Text>             
+            </View>
           </View>
-
+          <View style={styles.contactsContainer}> 
+            <View style={styles.contactsImageWrapper}>
+              <Image 
+                source={require('Assignment/assets/skype.png')} 
+              />
+            </View>
+            <View style={styles.contactsContent}>
+              <Text style={styles.contactsBigText}>
+                smith
+              </Text>             
+              <Text style={styles.contactsSmallText}>
+                Skype
+              </Text>             
+            </View>
+          </View>
+          <View style={styles.contactsContainer}> 
+            <View style={styles.contactsImageWrapper}>
+              <Image 
+                source={require('Assignment/assets/facebook.png')} 
+              />
+            </View>
+            <View style={styles.contactsContent}>
+              <Text style={styles.contactsBigText}>
+                Will Smith
+              </Text>             
+              <Text style={styles.contactsSmallText}>
+                Facebook
+              </Text>             
+            </View>
+          </View>
+          <View style={styles.contactsContainer}> 
+            <View style={styles.contactsImageWrapper}>
+              <Image 
+                source={require('Assignment/assets/site.png')} 
+              />
+            </View>
+            <View style={styles.contactsContent}>
+              <Text style={styles.contactsBigText}>
+                http://companyname.com 
+              </Text>             
+              <Text style={styles.contactsSmallText}>
+                site
+              </Text>             
+            </View>
+          </View>
+        </View>
 
         </View>
         </LinearGradient>
@@ -123,10 +200,18 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
   },
+  contentTop: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: screenHeight * 0.4,
+  },
+  contentBotttom: {
+    flexDirection: 'column',
+    height: screenHeight * 0.4,
+    width: screenWidth,
+  },
   titleContent: {
     height: 50,
-//    borderWidth: 1,
-//    borderColor: 'white',
   },
   title: {
     width: screenWidth * 0.9,
@@ -207,15 +292,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0b9fe4',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  blueButton: {
-    paddingTop: 10, 
-    paddingBottom: 10,
-    paddingLeft: 30,
-    paddingRight: 30,
-    backgroundColor: '#0b9fe4',
-    alignItems: 'center',
-    justifyContent: 'center',
+    borderRadius: 10,
   },
   blueButtonText: {
     color: 'white',
@@ -237,6 +314,26 @@ const styles = StyleSheet.create({
   },
   circleIcon: {
     color: '#e4c60b',
+  },
+  contactsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center'   
+  },
+  contactsBigText: {
+    color: 'white',
+    fontSize: 18,
+  },
+  contactsSmallText: {
+    color: '#34546c',
+    fontSize: 14,
+
+  },
+  contactsContent: {
+    
+  },
+  contactsImageWrapper: {
+    marginLeft: 20,
+    width: 40,
   }
 });
 
