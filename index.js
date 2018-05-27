@@ -26,9 +26,8 @@ class App extends React.Component {
         <View style={styles.content}>
           <View style={styles.titleContent}>
             <View style={styles.title}>
-              <Icon
-                name="align-left"
-                size={25}
+              <Image 
+                source={require('Assignment/assets/menu.png')} 
                 style={{color: 'white'}}
               />
               <Text style={styles.titleText}>
@@ -54,7 +53,6 @@ class App extends React.Component {
                 </Text>
                 <Text
                   style={styles.profileDescriptions}
-                  numberOfLines={1}
                 >
                   American actor, producer, rapper, comedian, and songwriter.
                   In April 2007, Newsweek called him
@@ -108,9 +106,10 @@ class App extends React.Component {
               </View>
             </View>
 
-
-
           </View>
+        <View style={styles.contentMiddle}>
+
+        </View>
         <View style={styles.contentBotttom}>
           <View style={styles.contactsContainer}> 
             <View style={styles.contactsImageWrapper}>
@@ -210,14 +209,16 @@ const styles = StyleSheet.create({
   contentTop: {
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: screenHeight * 0.4,
+    height: screenHeight * 0.5,
   },
   contentBotttom: {
     flexDirection: 'column',
-    height: screenHeight * 0.6,
-    width: screenWidth,
-   // justifyContent: 'space-between',
+    height: screenHeight * 0.5,
     justifyContent: 'space-around',
+    width: screenWidth,
+  },
+  contentMiddle: {
+    height: screenHeight * 0.05,
   },
   titleContent: {
     height: 50,
@@ -271,9 +272,9 @@ const styles = StyleSheet.create({
   stats: {
     width: screenWidth * 0.9,
     padding: 20,
-    borderWidth: 0.5,
-    borderRadius: 8,
-    borderColor: 'grey',
+    borderWidth: 0.4,
+    borderRadius: 15,
+    borderColor: '#34546c',
     backgroundColor: '#051b2b',
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -295,36 +296,37 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: screenWidth * 0.92,
+    
   },
   blueButton: {
-    paddingTop: 10, 
-    paddingBottom: 10,
-    paddingLeft: 30,
-    paddingRight: 30,
+    paddingTop: 12, 
+    paddingBottom: 12,
     backgroundColor: '#0b9fe4',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 10,
+    borderRadius: 8,
+    width: screenWidth * 0.42,
   },
   blueButtonText: {
     color: 'white',
     fontSize: 14,
   },
   yellowButton: {
-    paddingTop: 10, 
-    paddingBottom: 10,
-    paddingLeft: 30,
-    paddingRight: 30, 
+    paddingTop: 12, 
+    paddingBottom: 12,
+    width: screenWidth * 0.42,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
-    width: 200,
+    justifyContent: 'center',
+    backgroundColor: '#0b3657',
+    borderRadius: 8,
   },
   yellowButtonText: {
     color: '#e4c60b',
     fontSize: 14,
   },
   circleIcon: {
+    width: 20,
     color: '#e4c60b',
   },
   contactsContainer: {
