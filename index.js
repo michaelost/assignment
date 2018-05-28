@@ -260,6 +260,7 @@ const styles = EStyleSheet.create({
     fontWeight: 'bold',
   },
   profileDescriptions: {
+    marginTop: '5rem',
     color: '#6f9cbf',
     fontSize: '14rem',
     fontFamily: 'SF Light',
@@ -272,12 +273,10 @@ const styles = EStyleSheet.create({
   },
   stats: {
     width: screenWidth * 0.9,
-    padding: 20,
-    marginTop: 20,
-    marginBottom: 20,
-    borderWidth: 0.4,
+    padding: '18rem',
+    marginTop: '20rem',
+    marginBottom: '20rem',
     borderRadius: 15,
-    borderColor: '#34546c',
     backgroundColor: '#051b2b',
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -290,6 +289,7 @@ const styles = EStyleSheet.create({
   count: {
     fontSize: '18rem',
     color: 'white',
+    marginBottom: '4rem',
   },
   statName: {
     fontSize: '12rem',
@@ -299,25 +299,26 @@ const styles = EStyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: screenWidth * 0.92,
+    marginBottom: '5rem',
     
   },
   blueButton: {
-    paddingTop: 12, 
-    paddingBottom: 12,
+    paddingTop: '14rem', 
+    paddingBottom: '14rem',
     backgroundColor: '#0b9fe4',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
-    width: screenWidth * 0.42,
+    width: screenWidth * 0.43,
   },
   blueButtonText: {
     color: 'white',
     fontSize: '14rem',
   },
   yellowButton: {
-    paddingTop: 12, 
-    paddingBottom: 12,
-    width: screenWidth * 0.42,
+    paddingTop: '14rem', 
+    paddingBottom: '14rem',
+    width: screenWidth * 0.43,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -341,6 +342,7 @@ const styles = EStyleSheet.create({
     fontFamily: 'SF Regular',
     color: 'white',
     fontSize: '18rem',
+    marginBottom: '3rem',
   },
   contactsSmallText: {
 
