@@ -9,9 +9,18 @@ import {
   ScrollView,
 } from 'react-native';
 
+import EStyleSheet from 'react-native-extended-stylesheet';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
-//background-image: linear-gradient(180deg, rgba(5, 26, 42, 0.43) 0%, #051a2a 30%, #051a2a 100%);
+
+const screenHeight = Dimensions.get('window').height;
+const screenWidth = Dimensions.get('window').width;
+
+EStyleSheet.build({ 
+  $rem: screenWidth / 380,
+});
+
 class App extends React.Component {
   render() {
     const resizeMode = 'stretch';
@@ -107,9 +116,6 @@ class App extends React.Component {
             </View>
 
           </View>
-        <View style={styles.contentMiddle}>
-
-        </View>
         <View style={styles.contentBotttom}>
           <View style={styles.contactsContainer}> 
             <View style={styles.contactsImageWrapper}>
@@ -198,30 +204,25 @@ class App extends React.Component {
   }
 }
 
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
-
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: 'black',
+    
+    height: screenHeight,
   },
   contentTop: {
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: screenHeight * 0.5,
+    justifyContent: 'flex-start',
   },
   contentBotttom: {
     flexDirection: 'column',
-    height: screenHeight * 0.5,
     justifyContent: 'space-around',
     width: screenWidth,
-  },
-  contentMiddle: {
-    height: screenHeight * 0.05,
+    flex: 1,
   },
   titleContent: {
     height: 50,
+    justifyContent: 'center',
   },
   title: {
     width: screenWidth * 0.9,
@@ -230,13 +231,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   titleText: {
-    fontSize: 25,
+    fontSize: '25rem',
     color: 'white',
     fontFamily: 'SF Light',
   },
   content: {
     alignItems: 'center',
-   // marginTop: 20,
+    height: screenHeight,
   },
   avatarContent: {
     flexDirection: 'row',
@@ -253,14 +254,14 @@ const styles = StyleSheet.create({
     width: screenWidth * 0.6,
   },
   profileTitle: {
-    fontSize: 24,
+    fontSize: '24rem',
     color: 'white',
     fontFamily: 'SF Semibold',
     fontWeight: 'bold',
   },
   profileDescriptions: {
     color: '#6f9cbf',
-    fontSize: 14,
+    fontSize: '14rem',
     fontFamily: 'SF Light',
   },
   separator: {
@@ -272,6 +273,8 @@ const styles = StyleSheet.create({
   stats: {
     width: screenWidth * 0.9,
     padding: 20,
+    marginTop: 20,
+    marginBottom: 20,
     borderWidth: 0.4,
     borderRadius: 15,
     borderColor: '#34546c',
@@ -285,11 +288,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   count: {
-    fontSize: 18,
+    fontSize: '18rem',
     color: 'white',
   },
   statName: {
-    fontSize: 12,
+    fontSize: '12rem',
     color: '#6f9cbf',
   },
   buttonsContainer: {
@@ -309,7 +312,7 @@ const styles = StyleSheet.create({
   },
   blueButtonText: {
     color: 'white',
-    fontSize: 14,
+    fontSize: '14rem',
   },
   yellowButton: {
     paddingTop: 12, 
@@ -323,7 +326,7 @@ const styles = StyleSheet.create({
   },
   yellowButtonText: {
     color: '#e4c60b',
-    fontSize: 14,
+    fontSize: '14rem',
   },
   circleIcon: {
     width: 20,
@@ -337,13 +340,13 @@ const styles = StyleSheet.create({
   contactsBigText: {
     fontFamily: 'SF Regular',
     color: 'white',
-    fontSize: 18,
+    fontSize: '18rem',
   },
   contactsSmallText: {
 
     fontFamily: 'SF Medium',
     color: '#34546c',
-    fontSize: 14,
+    fontSize: '14rem',
 
   },
   contactsContent: {
